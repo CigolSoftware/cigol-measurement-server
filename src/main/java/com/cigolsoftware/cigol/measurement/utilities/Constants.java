@@ -11,7 +11,9 @@ public class Constants {
 	}
 
 	public static final class Mapping {
+		public static final String CHANGE = "change";
 		public static final String FIND_ALL = "findAll";
+		public static final String MAGNITUDE = "/{magnitude}";
 		public static final String MAGNITUDES = "magnitudes";
 
 		private Mapping() {
