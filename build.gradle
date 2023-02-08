@@ -1,0 +1,32 @@
+plugins {
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'java'
+	id 'org.springframework.boot' version '3.0.2'
+}
+
+group = 'com.cigolsoftware.cigol'
+sourceCompatibility = '17'
+version = '0.0.1'
+
+dependencies {
+	implementation 'com.cigolsoftware.cigol:cigol-server-sdk:0.0.1'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'org.postgresql:postgresql'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+repositories {
+	mavenCentral()
+    maven {
+    	url "https://cigolsoftware.jfrog.io/artifactory/server"
+        credentials {
+        	username = 'cigol.software@gmail.com'
+        	password = 'cmVmdGtuOjAxOjE3MDY4MTQxOTc6Wkt6UGVyQ0drd1pSNXBjYlhSQ0FCSlVkSnF3'
+    	}
+    }
+}
+
+task stage(dependsOn: ['bootJar'])
+tasks.named('test') { useJUnitPlatform() }

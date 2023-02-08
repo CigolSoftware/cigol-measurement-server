@@ -1,0 +1,110 @@
+params:
+  magnitudes:
+    -
+      code: CATALYTIC_ACTIVITY
+      name: Actividad Catalítica
+    -
+      code: PLANE_ANGLE
+      name: Ángulo Plano
+    -
+      code: SOLID_ANGLE
+      name: Ángulo Sólido
+    -
+      code: AREA
+      name: Área
+    -
+      code: AMOUNT
+      name: Cantidad
+    -
+      code: AMOUNT_SUBSTANCE
+      name: Cantidad de Sustancia
+    -
+      code: CAPACITANCE
+      name: Capacidad
+    -
+      code: ELECTRIC_CHARGE
+      name: Carga Eléctrica
+    -
+      code: ELECTRICAL_CONDUCTANCE
+      name: Conductancia Eléctrica
+    -
+      code: ELECTRIC_CURRENT
+      name: Corriente Eléctrica
+    -
+      code: MAGNETIC_FLUX_DENSITY
+      name: Densidad de Flujo Magnético
+    -
+      code: DOSE
+      name: Dosis
+    -
+      code: ENERGY
+      name: Energia
+    -
+      code: STRESS
+      name: Estrés
+    -
+      code: LUMINOUS_FLUX
+      name: Flujo Luminoso
+    -
+      code: MAGNETIC_FLUX
+      name: Flujo Magnético
+    -
+      code: FREQUENCY
+      name: Frecuencia
+    -
+      code: FORCE
+      name: Fuerza
+    -
+      code: ILLUMINANCE
+      name: Iluminancia
+    -
+      code: IMPEDANCE
+      name: Impedancia
+    -
+      code: INDUCTANCE
+      name: Inductancia
+    -
+      code: LUMINOUS_INTENSITY
+      name: Intensidad Luminosa
+    -
+      code: LENGTH
+      name: Longitud
+    -
+      code: MASS
+      name: Masa
+    -
+      code: POWER
+      name: Poder
+    -
+      code: THERMODYNAMIC_TEMPERATURE
+      name: Temperatura Termodinámica
+    -
+      code: TIME
+      name: Tiempo
+    -
+      code: VERGENCE
+      name: Vergencia
+    -
+      code: VOLTAGE
+      name: Voltaje
+    -
+      code: VOLUME
+      name: Volumen
+spring:
+  datasource:
+    password: ${JDBC_DATABASE_PASSWORD}
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+  jpa:
+    open-in-view: false
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    password: PostgreSQL.100
+    url: jdbc:postgresql://localhost:5432/sweetening
+    username: postgres
+  jpa:
+    show-sql: true
