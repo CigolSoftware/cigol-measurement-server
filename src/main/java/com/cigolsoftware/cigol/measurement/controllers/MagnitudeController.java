@@ -14,13 +14,12 @@ import com.cigolsoftware.cigol.measurement.enums.Magnitude;
 import com.cigolsoftware.cigol.measurement.services.MagnitudeService;
 import com.cigolsoftware.cigol.measurement.utilities.Constants;
 import com.cigolsoftware.cigol.sdk.configurations.ControllerMapping;
-import com.cigolsoftware.cigol.sdk.controllers.Controller;
 import com.cigolsoftware.cigol.sdk.dto.Body;
 import com.cigolsoftware.cigol.sdk.enums.Reply;
 import com.cigolsoftware.cigol.sdk.utilities.Tools;
 
 @ControllerMapping(Constants.Mapping.MAGNITUDES)
-public class MagnitudeController extends Controller<MagnitudeDto, MagnitudeService> {
+public class MagnitudeController extends CodeController<MagnitudeDto, MagnitudeService> {
 
 	@Autowired
 	private Params params;
@@ -38,16 +37,9 @@ public class MagnitudeController extends Controller<MagnitudeDto, MagnitudeServi
 		return Body.ok(Reply.OK);
 	}
 
-	@GetMapping(Constants.Mapping.FIND_ALL)
-	public ResponseEntity<Body<List<MagnitudeDto>>> findAll() {
-		final var all = this.service.findAll();
-		return Body.ok(Tools.copyProperties(this.params.getMagnitudes(), MagnitudeDto::new).stream().map(mag -> {
-			all.forEach(m -> {
-				if (m.getCode() == mag.getCode()) {
-					mag.setId(m.getId());
-				}
-			});
-			return mag;
-		}).toList());
+	@Override
+	protected List<MagnitudeDto> codes() {
+		return Tools.copyProperties(this.params.getMagnitudes(), MagnitudeDto::new);
 	}
+
 }

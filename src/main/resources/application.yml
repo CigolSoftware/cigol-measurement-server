@@ -90,6 +90,79 @@ params:
     -
       code: VOLUME
       name: Volumen
+  prefixes:
+    -
+      code: ATTO
+      name: Atto
+    -
+      code: CENTI
+      name: Centi
+    -
+      code: DECA
+      name: Deca
+    -
+      code: DECI
+      name: Deci
+    -
+      code: EXA
+      name: Exa
+    -
+      code: FEMTO
+      name: Femto
+    -
+      code: GIGA
+      name: Giga
+    -
+      code: HECTO
+      name: Hecto
+    -
+      code: KILO
+      name: Kilo
+    -
+      code: MEGA
+      name: Mega
+    -
+      code: MICRO
+      name: Micro
+    -
+      code: MILLI
+      name: Milli
+    -
+      code: NANO
+      name: Nano
+    -
+      code: PETA
+      name: Peta
+    -
+      code: PICO
+      name: Pico
+    -
+      code: QUECTO
+      name: Quecto
+    -
+      code: QUETTA
+      name: Quetta
+    -
+      code: RONNA
+      name: Ronna
+    -
+      code: RONTO
+      name: Ronto
+    -
+      code: TERA
+      name: Tera
+    -
+      code: YOCTO
+      name: Yocto
+    -
+      code: YOTTA
+      name: Yotta
+    -
+      code: ZEPTO
+      name: Zepto
+    -
+      code: ZETTA
+      name: Zetta
 spring:
   datasource:
     password: ${JDBC_DATABASE_PASSWORD}

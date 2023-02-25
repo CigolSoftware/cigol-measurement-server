@@ -3,8 +3,11 @@ package com.cigolsoftware.cigol.measurement.utilities;
 public class Constants {
 	public static final class Column {
 		public static final String CODE_MAG = "code" + Column.MAG;
+		public static final String CODE_PRE = "code" + Column.PRE;
 		public static final String ID_MAG = "id" + Column.MAG;
+		public static final String ID_PRE = "id" + Column.PRE;
 		private static final String MAG = "_mag";
+		private static final String PRE = "_pre";
 
 		private Column() {
 		}
@@ -15,6 +18,7 @@ public class Constants {
 		public static final String FIND_ALL = "findAll";
 		public static final String MAGNITUDE = "/{magnitude}";
 		public static final String MAGNITUDES = "magnitudes";
+		public static final String PREFIXES = "prefixes";
 
 		private Mapping() {
 		}
