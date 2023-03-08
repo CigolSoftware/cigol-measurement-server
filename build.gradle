@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.cigolsoftware.cigol'
 sourceCompatibility = '17'
-version = '0.1.1'
+version = '0.2.0'
 
 dependencies {
 	implementation 'com.cigolsoftware.cigol:cigol-server-sdk:0.0.4'

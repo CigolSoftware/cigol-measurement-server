@@ -8,11 +8,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class PrefixDto extends CodeDto<Prefix, PrefixDao> {
 
-	protected Prefix code;
-
 	@Override
 	public PrefixDao dao() {
 		return Tools.copyProperties(this, new PrefixDao());
 	}
-
 }
